@@ -13,6 +13,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Tournee from './pages/Tournee/Tournee';
 import Depots from './pages/Depots/Depots';
+import QrCode from './pages/QRCodeReader/QrCode';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -46,6 +47,9 @@ const App: React.FC = () => (
           <Route exact path ="/depots">
             <Depots />
           </Route>
+          <Route exact path="/qrcode">
+            <QrCode />
+          </Route>
           <Route exact path="/">
             <Redirect to="/tournee" />
           </Route>
@@ -54,6 +58,10 @@ const App: React.FC = () => (
           <IonTabButton tab="tournee" href="/tournee">
             <IonIcon aria-hidden="true" icon={square} />
             <IonLabel>Tournée</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="qrcode" href="/qrcode">
+            <IonIcon aria-hidden="true" icon={triangle}/>
+            <IonLabel>QrCode</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

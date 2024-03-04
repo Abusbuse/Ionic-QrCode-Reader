@@ -29,9 +29,20 @@
     }
 }
 
-/* BEGIN: Additional styles using percentages */
 .depots-title {
     font-size: 100%;
     margin-bottom: 2%;
 }
-/* END: Additional styles using percentages */
+
+.depots-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.depots-list {
+  width: 90%;
+  margin: 0 5%;
+}
