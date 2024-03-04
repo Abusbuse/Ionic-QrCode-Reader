@@ -10,10 +10,11 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { atCircle, ellipse, square, triangle } from 'ionicons/icons';
 import Tournee from './pages/Tournee/Tournee';
 import Depots from './pages/Depots/Depots';
 import QrCode from './pages/QRCodeReader/QrCode';
+import QrCodeTest from './pages/OtherOne/QrCodeTest';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,6 +51,9 @@ const App: React.FC = () => (
           <Route exact path="/qrcode">
             <QrCode />
           </Route>
+          <Route exact path="/qrcodetest">
+            <QrCodeTest />
+          </Route>
           <Route exact path="/">
             <Redirect to="/tournee" />
           </Route>
@@ -62,6 +66,10 @@ const App: React.FC = () => (
           <IonTabButton tab="qrcode" href="/qrcode">
             <IonIcon aria-hidden="true" icon={triangle}/>
             <IonLabel>QrCode</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="qrcodetest" href="/qrcodetest">
+            <IonIcon aria-hidden="true" icon={atCircle}/>
+            <IonLabel>QrCodetest</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
